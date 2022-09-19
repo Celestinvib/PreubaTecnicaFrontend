@@ -1,0 +1,39 @@
+<div class="container d-flex justify-content-center">
+  <div class="row m-4" *ngIf="tvShow!=null; else wait">
+    <div class="col">
+        <div class="card bg-dark text-light" >
+                <img class="card-img-top p-2" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/{{ tvShow.poster_path }}" height="300px" alt="Card image cap">
+                <div class="card-body p-2" >
+                    <div class="col">
+                      <br>
+                      <div class="col">
+                        <label for="name" class="form-label">Title:</label>
+                          <input type="text" class="form-control" id="name" value="{{tvShow.name}}" readonly="readonly">
+                      </div>
+
+                      <div class="col">
+                        <label for="originalTitle" class="form-label">Original title:</label>
+                        <input type="text" class="form-control" id="originalTitle" value="{{tvShow.original_name}}" readonly="readonly">
+                      </div>
+
+                      <div class="col">
+                        <label for="overview" class="form-label">Overview:</label>
+                        <textarea class="form-control" id="overview" rows="3">{{tvShow.overview}}</textarea>
+                      </div>
+
+                      <div class="col">
+                        <label for="gender" class="form-label">Release Date:</label>
+                        <input type="text" class="form-control" id="name" value="{{tvShow.first_air_date}}" readonly="readonly">
+                      </div>
+
+                      <div class="col">
+                        <label for="origin" class="form-label">Vote Count</label>
+                        <input type="text" class="form-control" id="name" value="{{tvShow.vote_count}}" readonly="readonly">
+                      </div>
+                      <br>
+                    </div>
+                    </div>
+        </div>
+        </div>
+  </div>
+  <ng-template #wait>Waiting for the data<br> if it takes to long maybe the character don't exists...</ng-template>
