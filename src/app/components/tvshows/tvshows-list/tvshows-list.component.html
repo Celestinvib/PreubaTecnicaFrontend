@@ -1,0 +1,14 @@
+<div class="row m-2" *ngIf="tvshows!=null; else wait">
+  <div class="col mt-4 d-flex justify-content-center" *ngFor="let tvshow of tvshows.results">
+          <div class="card bg-dark p-2 text-light" style="width: 18rem;">
+              <img  src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/{{tvshow.poster_path}}" class="card-img-top" alt="card-movie-poster-img-top">
+                  <div class="card-body">
+                      <h6 class="card-title text-center">{{ tvshow.name}}</h6>
+                      <div class="d-grid gap-2">
+                      <a class="btn btn-warning" routerLink="/tvshows/tvshow/show" [queryParams]="{id: tvshow.id}">See more</a>
+                      </div>
+                  </div>
+          </div>
+    </div>
+</div>
+<ng-template #wait>Waiting for the data, maybe it takes a couple of seconds...</ng-template>
