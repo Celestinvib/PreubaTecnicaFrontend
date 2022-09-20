@@ -1,4 +1,4 @@
-# PreubaTecnicaFrontend
+# PruebaTecnicaFrontend
 Frontend TMDB App of Movies & tv-series!<br>
 ## Details to be considered 📑 :
 The app is not complete<br>
